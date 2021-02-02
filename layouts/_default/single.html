@@ -22,8 +22,7 @@
           >— {{ $.Site.Params.WrittenBy | default "Written by" }} {{ . }}</span
         >{{ end }}
 
-
-      {{ if $.Site.Params.ShowReadingTime }}
+      {{ if or .Params.ShowReadingTime $.Site.Params.ShowReadingTime }}
         <span class="post-read-time"
           >— {{ .ReadingTime }} {{ $.Site.Params.MinuteReadingTime | default "min read" }}</span
         >
